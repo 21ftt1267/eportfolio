@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 7-1</title>
+
+	<style type="text/css">
+		
+		div{display: flex; border: 1px solid; width: 800px;}
+		p{width:100px;height: 100px;
+			background-color: cyan;
+			border: 1px solid;
+			box-sizing: border-box;} /*(maintain size)*/
+
+		/*p:nth-child(1),
+		p:nth-child(3),
+		p:nth-child(4){flex-grow: 1;};
+	
+		p:nth-child(2){flex-grow: 2;};*/
+	/*flex-growth:  space allocation where the parent container still has remaining space*/
+		/*p:nth-child(1){flex-grow: 2;}
+		p:nth-child(2){flex-grow: 1;}
+		p:nth-child(4){flex-grow: 1;};*/
+	
+			/*flex-shrink factor*/
+		div{width: 300px;}
+		p:nth-child(1){flex-shrink: 2;}
+		p:nth-child(2){flex-shrink: 0;}
+		p:nth-child(4){flex-shrink: 1;} 
+		/*if no specify then it will follow default shrink value which is 1*/
+	
+
+		/** the way flex-grow works*
+1. parent width= 800px
+2. total widths of children= 100 x 4= 400px
+3. calculate available remaining space= 800-400= 400
+4. calculate growth factor
+	1 + 1 + 1 + 2= 5 
+5. calculate space allocated
+	grow ratio x remaining space
+		p1. 1/5 x 400= 80
+		p2. 2/5 x 400= 160
+		p3. 1/5 x 400= 80
+		p4. 1/5 x 400= 80
+6. calculate final width= space allocated + initial widths
+		p1. 80 + 100= 180
+		p2. 160+ 100= 260
+		p3. 80 + 100= 180
+		p4. 80 + 100= 180*/
+
+/*		the way shrink factor works
+		parent=200px
+		child= 100x4=400 
+		RS 200-400= -200
+		shrink factor total (if no state shrink factor then it use default so thus p3 has shrink factor of 1)
+		2+0+1+1= 4
+		2/4 x -200= -100
+		0/4 x -200= 0
+		1/4 x -200= -50
+		1/4 x -200= -50
+		final
+	-100 + 100 = 0?
+	100
+	-50+100= 50
+	-25+100= 75
+	-25+100= 75*/
+
+
+
+
+	</style>
+</head>
+<body>
+<div>
+	<p>1</p><p>2</p><p>3</p><p>4</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">  
+
+     .sibling-element {
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+     .parent-element {
+        position: relative;
+        height: 200px;
+        padding:   10px;
+        background-color: #81adc8;
+
+    }
+    .main-element {
+          /*position: static; { static has no effect on left, right, bottom and top. }*/
+
+        /*position: relative; { relative starts from where you are at the moment and move accordingly. }*/
+
+       /* position: absolute;*/ /*{ Based on the parent of the element, looks for position property in parent element. If no position, it will look at the next parent, which is the body. If no position, it will keep moving up to find position property. It will follow the page's property if all parent element no property.}*/
+
+       /* First scenario of absolute, It will push to the bottom if bottom: 0 and then because left: 0, there will be no spacing from the left, starts from the page outside the blue box;*/
+
+       /*Second scenario of absolute, the parent element has position of relative, position will start from inside the parent-element(blue box) */
+
+       /* Position absolute is affected by scrolling whereas position fixed is not affected by scrolling*/
+
+        position: fixed; /*{they will not depend on the parent element having a position, it remains on the spot.}
+*/
+        right: 0;
+        bottom: 0;
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    </style>
+</head>
+<body>
+ <div class="parent-element">
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+            
+            <div class="main-element">
+                All eyes on me. I am the main element.
+            </div>
+            
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+</div>
+</body>
+</html>

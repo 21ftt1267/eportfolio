@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<style type="text/css">
+			img{width: 300px;height: 250px;}
+			img[src^="assets/images/my/"]{border: 3px solid turquoise;} 
+			/*^Using the above approach is an attribute selector, makes it less messy from using alot of class selectors. (^= the arrow up means "start with"
+			Instead of .turq{border: 3px solid turquoise})*/
+			.fs{font-size: 2em}
+
+			/*.dc{color: darkcyan;}*/
+				p[id="fs"], li{color: darkcyan;}
+			/*Look for paragraph element with id=fs [(,) indicates multiple selector] and list.*/
+
+			/*.cn{font-family: "courier new"}*/
+			h3, input[type="text"]{font-family: "courier new";}
+			/*Look for h3 and input element with attribute type which is text*/
+
+			/*.samewidth{width: 200px;}*/
+			input[class]{width: 200px;} 
+			/*Look for input element with attribute type which has class*/
+
+			/*li.italic{font-style:italic }*/
+
+				/*li:nth-child(even){font-style:italic;}*/
+			/*	Find li element, child of ol, find Whatever is in the list, even numbered sentence is selected (2,4,6,8) */
+
+			/*li:nth-child(4){font-style:italic;}*/
+		/*	Only number 4 is selected*/
+
+			/*li:nth-child(3n){font-style:italic;}*/
+			/*Multiple of 3 gets selected because 3n means 3 multiples by n which is an increasing integer from 0
+			3x0
+			3x1=3
+			3x2=6*/
+
+			/*li:nth-child(2n+1){font-style:italic;}*/
+			/*Another way of writing 'odd' 
+			2n+1 
+			2x0 +1= 1
+			2x1 +1=3 
+			2x2 +1=5*/
+
+			li:nth-child(2n+2){font-style:italic;}
+			/*Another way of writing 'even'
+
+			***the nth-child will have an issue if other attributes in the sibling of ol, nth type op?*/
+
+			input{display: block;}
+			
+			div, .border{border: 1px solid;}
+
+			/*.navy{border-color: navy}*/
+			input[class~="border"]{border-color: navy;}
+			/*(~=) Look for input element with attribute class that has the word border in its value. */
+
+			div{width: 150px;height: 100px; padding:20px: border-box} 
+			/*Padding {top,righht,bottle,left is all 10px}
+			Padding is the surrounding, margin will push 25px from the left. Margin shifts the element
+*/
+			/*#d1{padding-left: 25px;box-sizing: border-box;}*/
+			#d1{box-sizing: border-box; padding-left: 25px;} /* the border box regardless of padding and margin, it strictly follows the width and height*/
+
+			/*#d2{margin-left: 25px;}*/
+
+			/*#d2{display: none;}*/
+			/*#d2{visibility: hidden;}*/
+			/*visibility hidden will just hide it but takes space however display:none will completely remove the space and causes the other element to take up the space.*/
+
+		</style>
+	
+</head>
+<body>
+<!-- <p class="fs dc">Here is my favorite pictures</p>  USING CLASS DC-->
+<p class="fs">Here is my favorite pictures</p>
+
+<img src="assets/images/th/t-1.jpg" alt="">
+<!-- <img src="assets/images/my/m-1.jpg" class="turq" alt=""> 
+<img src="assets/images/my/m-2.jpg" class="turq" alt=""> -->
+<img src="assets/images/my/m-1.jpg" alt=""> 
+<img src="assets/images/my/m-2.jpg" alt="">
+<img src="assets/images/th/t-2.jpg" alt="">
+<p>Just a form</p>
+<form action="">
+	<!-- <input type="text" class="cn samewidth border navy" placeholder="name" name="fullname">
+	<input type="text" class="cn samewidth border navy" placeholder="fone" name="fone">  USING CLASS CN-->
+
+<!-- 	<input type="text" class="samewidth border navy" placeholder="name" name="fullname">
+	<input type="text" class="samewidth border navy" placeholder="fone" name="fone">
+
+	<input type="email" class="samewidth border navy" placeholder="email" name="email">
+	<input type="number" class="samewidth border navy" name="captcha" placeholder="5x2">  USING SAMEWIDTH CLASS-->
+
+	<!-- <input type="text" class="border navy" placeholder="name" name="fullname">
+	<input type="text" class="border navy" placeholder="fone" name="fone">
+
+	<input type="email" class="border navy" placeholder="email" name="email">
+	<input type="number" class="border navy" name="captcha" placeholder="5x2">
+	<input type="submit"> USING CLASS NAVY-->
+
+	<input type="text" class="border" placeholder="name" name="fullname">
+	<input type="text" class="border" placeholder="fone" name="fone">
+
+	<input type="email" class="border" placeholder="email" name="email">
+	<input type="number" class="border" name="captcha" placeholder="5x2">
+	<input type="submit">
+</form>
+<!-- <h3 class="cn border">here is list of my songs</h3> USING CLASS CN-->
+<h3 class="border">here is list of my songs</h3>
+
+<ol class="dc">
+	<!-- <li>Dimana janji mu dulu</li>
+	<li class="italic">Insan ku sayang menghilang</li>
+	<li>Resah kerinduan</li>
+	<li class="italic">Mengusung rindu</li>
+	<li>Malam semakin dingin</li>
+	<li class="italic">Haruskah kita berpisah</li>
+	<li>Salah apa aku</li>
+	<li class="italic">Salam terakhir</li -->
+	<li>Dimana janji mu dulu</li>
+	<li>Insan ku sayang menghilang</li>
+	<li>Resah kerinduan</li>
+	<li>Mengusung rindu</li>
+	<li>Malam semakin dingin</li>
+	<li>Haruskah kita berpisah</li>
+	<li>Salah apa aku</li>
+	<li>Salam terakhir</li>
+</ol>
+<p>can you tell the difference?</p>
+<div id="d1">Im a border-box</div>
+<div id="d2">Im a content-box</div>
+<div id="d3">Another div</div>
+
+</body>
+</html>
