@@ -7,11 +7,23 @@
 
 	<style type="text/css">
 		
-		div{display: flex; border: 1px solid; width: 800px;}
+		div{display: flex; border: 1px solid; width: 900px; height: 400px; justify-content: space-around; align-items: center;
+		}
+		/*justify-content:space-around; (the space inbetween)*/
+			/*align-items: center; (deals with the vertical-axis), only for single line, no wrap*/
+			/*flex-direction:column; (from one line, becomes multiple lines it makes it in a column| in a stack manner)*/
+			/*flex-direction: row-reverse; ( the numbers in reversed)*/
+			/*flex-wrap:wrap; (instead of squeezing it, it becomes two rows when there is limited space when the p larger than the div)*/
+			/*	align-content: center (the boxes will be bring to the center, only works if theres wrap or flex-wrap, multiple flex lines)*/
+			
 		p{width:100px;height: 100px;
 			background-color: cyan;
 			border: 1px solid;
 			box-sizing: border-box;} /*(maintain size)*/
+			
+			p:nth-child(odd){align-self: flex-start};/* align-self use to move/lay-out one individual flex item*/ 
+
+			/*align-self:flex-end, makes it start from the bottom in the box*/
 
 		/*p:nth-child(1),
 		p:nth-child(3),
