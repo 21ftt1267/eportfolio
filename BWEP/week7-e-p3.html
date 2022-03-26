@@ -21,8 +21,7 @@
 		    width: 70%;
 			padding:10px 0px;
 			box-sizing: border-box;
-			text-align: center;
-			/*border: solid 1px;*/}
+			text-align: center;}
 
 	.para2 {
 			width: 100%;
@@ -39,29 +38,30 @@
 
 
 <body>
-<div id="container">
+<div id="content">
 
+	
 			<div class="para"><label>Fullname</label></div>
 			<div><input type="text" name="Fullname" id="Fullname" maxlength="30"></div>
 
 			<div class="para"><label>Email</label></div>
 			<div><input type="Email" name="Email" id="Email"></div>
-
+	
 			<div class="para"><label>Date you can start</label></div>
 			<div><input type=Date name="Date" id="Date"></div>
-
+	
 			<div class="para"><label>Morning shift preference</label></div>
 			<div><input type="time" name="Morning shift preference" id="Morning shift preference"></div>
-
+	
 			<div class="para"><label>Evening shift perference</label></div>
 			<div><input type="time" name="Evening shift preference" id="Evening shift preference"></div>
 
 			<div class="para"><label>How many hours you can work? In multiple of 3</label></div>
-			<div><input type="number" name="hours" id="hours" min="3" max="9">></div>
+			<div><input type="number" name="hours" id="hours" min="3" max="9"></div>
 
 			<div class="para"><label>Distance you willing to commute to volunteer center?</label></div>
 			
-			<div>1<input type="Distance" name="Distance" id="Distance" min='1', max='15', steps='1' value="3">15</div>
+			<div>1<input type="range" name="Distance" id="Distance" min="1" max="15" default="3">15</div>
 
 			<div class="para"><label>You currency perference for payment?</label></div>
 
@@ -77,7 +77,7 @@
 			</div>
 
 			<div class="para2">
-					<label for="text"></label><textarea id="address" name="address" rows="6" cols="40" placeholder="Type your home address"></textarea></div>
+					<textarea id="address" name="address" rows="6" cols="40" placeholder="Type your home address"></textarea>
 			</div>
 
 			<div class="para2">
@@ -92,7 +92,6 @@
 					<label>Prove you are not robot: 10 &#60; 20? 
 					<input type="checkbox" name="checkbox" id="checkbox"></label>
 			</div>
-
 			<div class="para2">
 					<input type="submit" value="Volunteer now!">
 			</div>
@@ -105,9 +104,9 @@
 
 			<div class="para2">
 
-					<label>For more informaton, visit MOH <a href="" target="_blank">website</a></div></label>
+					<label>For more informaton, visit MOH <a href="https://www.moh.gov.bn/Pages/Home.aspx" target="_blank">website</a></label>
 			</div>
-		</div>
+</div>
 
 
 <!-- <p>Denzel Washington once said...</p>
