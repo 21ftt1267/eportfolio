@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+// 0-6hr, regardless of weather, it is too early to go out
+// 7-16r +sunny, lets play outside
+// 7-16hr + rainy, lets play indoor
+// 12-21hr + sunny, lets go to the cinema 
+// 12-21hr+rainy, watch a movie at home 
+// 22-24hr, regardless of weather, it is bed time! 
+// 24<time, invalid time and goodbye
+
+
+	var time=prompt("Enter time in 24hr: ");
+	var wx=prompt("Enter weather ");
+
+	// if(time>=0 && time<=6){console.log("Too early to go out");} 
+	// 	else if(time>6 && time<17) && wx=="sunny"{console.log("Lets play outside";}
+	// 	else if(time>6 && time<17) && wx=="rainy"{console.log("Lets play indoor";}
+	// 	else if(time>16 && time<22) && wx=="sunny"{console.log("Lets go to the cinema";}
+	// 	else if(time>16 && time<22)&& wx=="rainy"{console.log("Watch a movie at home";}
+	// 	else if(time>21 && time<25){console.log("It is bed time");}
+	// 	else{console.log("Invalid time, goodbye.");}
+
+
+	if(time>=0 && time<=6){console.log("Too early to go out ");}
+		if (time>6 && time<17) 
+			if(wx="sunny"){console.log("Lets play outside");}
+			else(wx="rainy"){console.log("Lets play indoor");}
+		else if(time>16 && time<17)
+			if(wx="sunny"){console.log("Lets go to the cinema");}
+			else(wx="rainy"){console.log("Watch a movie at home");}
+		else if(time>21 && time<25){console.log("It is bed time");}
+	else{console.log("Invalid time, goodbye.");}
+
+
+
+
+
+</script>
+</body>
+</html>

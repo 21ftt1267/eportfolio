@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>week10-2</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// var x = 10;
+	// var y = 15;
+	// var z = "10";
+	// var x, y, z is initialize bc you give it a value
+
+	// var answer = (x==y);
+	// alert(answer);
+
+	// alert(x===z); [page shows false because triple (=) compare not just the value but the types.]
+
+	// alert(x==z); [page shows true because it only sees the value]
+
+	// var t;
+	// var t=""; 
+	// t=""; empty string, it will display t is comapred to t; it displays t is undefined.
+	// var t is declare, what is the value assigned to it?
+	// console.log("t is "+t);
+
+	// x=5; 
+	// console.log("x is "+x)
+	// // [dont appear in page, appear in developer's window]
+	// const DISCOUNT= 0.1;
+	//  // [a constant means when you set a value, in the program cannot be changed anymore]
+	//  console.log("DISCOUNT is " + DISCOUNT);
+	//  DISCOUNT= 0.5;
+	//  console.log("DISCOUNT is " +DISCOUNT);
+	
+	// if(x>y)
+	// 	{console.log("X is basar than Y");}
+
+	// if(x<y)
+	// 	{console.log{"X is damit than Y"};}
+// METHOD 1
+
+	// if(x>y)
+	// 	{console.log("X is basar than Y");}
+
+	// else
+	// 	{console.log{"X is damit than Y"};}
+// METHOD 2
+
+	
+	var name=prompt("Enter your name: ");
+	var gender=prompt("Enter your gender [M/F]: ");
+	var birth= prompt("Enter year of birth ");
+	var date = new Date();
+	var year = date.getFullYear();
+	var truname= "";
+
+	// Enter your name: Siti
+	// Enter your gender [M/F]: F
+	// Enter year of birth: 2002
+
+	// if(gender=="M"){truname= "Awang " + name;}
+	// 	else{truname= "Dayang " +name;}
+
+	//SOLUTION 1: this one is repetitive, tho its okay it is not preferred
+	// if(gender=="M"){truname="Awang " +name;}
+	// if(gender=="m"){truname="Awang " +name;}
+	// if(gender=="F"){truname="Dayang " +name;}
+	// if(gender=="f"){truname="Dayang " +name;}
+
+	//SOLUTION 2: improved version of solution 1, however if people input other letters (x,y,z 1,2,3 ) it will always print out Dayang so move onto solution 3
+	// if(gender=="M" || gender=="m")  
+	// 	{truname= "Awang " + name;}
+
+	// 	else{truname= "Dayang " +name;}
+
+
+	//SOLUTION 3: Apart from M|F, if user inputs other letters, this solution will take a lot of time because of the endless possibilities
+
+	// if(gender=="M" || gender=="m")  CANNOT INPUT JUST "m", must be gender=="m"
+	// 	{truname= "Awang " + name;}
+
+	// 	if(gender=="F" || gender=="f")
+	// {truname= "Dayang " +name;}
+
+	// if (gender=="A") || gender= "a")
+	//{truname= "Awg/Dyng " +name;}
+
+
+	//SOLUTION 4: This is the improved version of solution 3.
+		if(gender=="M" || gender=="m")
+		{truname= "Awang " + name;}
+	
+		else if(gender=="f" || gender=="F")
+			{truname= "Dayang " +name;}
+
+		else{truname="Awg/Dyg " +name;} 
+
+	document.write("Hi "+truname+" . This year you will be " + (year-birth) + "years old")
+
+// Hi dayang Siti. This year you will be 20 years old
+</script>
+</body>
+</html>

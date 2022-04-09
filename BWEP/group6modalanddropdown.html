@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>group 6 dropdown and modals</title>
+</head>
+<body>
+<div class="container">
+  <h2>Dropdowns</h2>
+  <p>This is an example of dropdown </p>                                          
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">More
+    <span class="caret"></span></button> <!-- <-If this is removed then the drop down menu cannot be used -->
+    <ul class="dropdown-menu">  <!-- -if this is removed then the contents below in <li> will not be in the dropdown but instead placed below the button 'more' -->
+      <li><a href="#">Packages</a></li>
+      <li><a href="#">Programs</a></li>
+      <li><a href="#">Gallery</li>
+      <li class="divider"></li> <!--  <--this is a divider that separates the sections with a thin line in the drop down menu -->
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <h2>Modal</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click here for more</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog"> <!-- <---for the modal to pop up -->
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button> <!-- <----this is another way to put the close button (x -->
+          <h4 class="modal-title">URGENT!!!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Please take a moment to read this.
+          Hello, have a nice day.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <!-- <--this is a second way of giving the users the choice to exit the modal. -->
+
+    <!--       	The modals can also be adjsuted in size, modal-sm/modal-lg are placed in the div class. -->
+</body>
+</html>

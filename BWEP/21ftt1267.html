@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>21ftt1267</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var name= prompt("Enter name: ");
+		var time= prompt("\nEnter time in 24hr (whole number only): ");
+		var firstnum=prompt("\nEnter first number: ");
+		var secondnum=prompt("\nEnter second number: ");
+		var choice=prompt("\nEnter choice: 1 add, 2 multiply: ");
+		var greetings="";
+		var answer="";
+
+
+		if (time<=12) {greetings="Good Morning " + name;}
+		else{greetings="Good Day " +name;}
+
+		if(choice==1){answer=firstnum + secondnum;} 
+		else{answer=firstnum*secondnum;}
+
+		document.write(greetings);
+		document.write("Your entered " + firstnum + "&" +secondnum);
+		document.write("You decided to " + choice +"them");
+		document.write("The answer is " +answer);
+		document.write("Have a good day")
+	</script>
+<!-- 0-12 good morning
+good day
+25-26 invalid -->
+
+</body>
+</html>
