@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+
+
+//EXCERCISE PART 1
+	// var math = prompt("Do you have credit for Mathematics? ")
+	// var eng = prompt("Do you have credit for English Language? ")
+	// var malay = prompt("Do you have credit for Malay Language? ")
+	// var ic = prompt("Are you yellow IC holder? ")
+	// var eng3 = prompt("Do you have credit in 3 English medium subjects ")
+
+
+	// 	if(math=="y" && eng=="y" && malay=="y" && ic== "y" && eng3=="y"){document.write("Congratulation! you are eligible to apply and recieve full scholarship.")}
+
+
+
+		// else if(math=="y" && eng=="y" && malay=="y" && ic== "n" && eng3=="y"){document.write("You are eligible to apply as fee paying student.")}
+
+		// else if(math=="y" && eng=="y" && malay=="n" && ic== "y" && eng3=="y"){document.write("You are eligible to apply as fee paying student.")}
+
+		// else if(math=="y" && eng=="y" && malay=="n" && ic== "n" && eng3=="y"){document.write("You are eligible to apply as fee paying student.")}  //** no ic and no malay, fee paying student?
+
+		//** else if(math=="y" && eng=="n" && malay=="y" && ic== "y" && eng3=="y"){document.write("You are eligible to apply as fee paying student.")}
+
+		//** else if(math=="n" && eng=="y" && malay=="y" && ic== "y" && eng3=="y"){document.write("You are eligible to apply as fee paying student.")}
+
+
+
+		// else if(math=="y" && eng=="y" && malay=="y" && ic== "y" && eng3=="n"){document.write("Sorry, you are not eligible to apply.")}
+
+		// else{document.write("Sorry, you are not eligible to apply.")}
+
+
+
+
+
+//alternative solutions:
+
+//Solution 1.can use OR operator to shorten the sentences.
+
+//Solution 2.nest the malay and ic under Maths, Eng and Eng3.
+
+
+//EXCERCISE PART 2
+//var number = prompt("Enter a number between 1 - 5 and I will spell them in words: ")
+
+	// if(number==1){document.write("You have entered ONE")} 
+	// else if(number==2){document.write("You have entered TWO")} 
+	// else if(number==3){document.write("You have entered THREE")} 
+	// else if(number==4){document.write("You have entered FOUR")} 
+	// else if(number==5){document.write("You have entered FIVE")} 
+	// else{document.write("I am yet to learn that!")}
+
+	
+
+//**SOLUTION USING SWITCH
+
+//The value in the case will be compared to the provided value e.g; 1==="1" is not true.
+//ways to fix this problem: use " ". e.g; case "1";.
+//Use the Number function -> Num() on the prompt E.g; **var number = Number(prompt("Enter a number between 1 - 5 and I will spell them in words: "))
+
+
+// 	switch(number){
+// 		case 1:
+// 		{document.write("You have entered ONE")}
+// 		break;
+// 		case 2:
+// 		{document.write("You have entered TWO")}
+// 		break;
+// 		case 3:
+// 		{document.write("You have entered THREE")}
+// 		break;
+// 		case 4:
+// 		{document.write("You have entered FOUR")}
+// 		break;
+// 		case 5:
+// 		{document.write("You have entered FIVE")}
+// 		break;
+// 		default:
+// 		{document.write("I am yet to learn that!")}
+// }
+
+
+
+
+//EXCERCISE PART 3
+
+//USING IF ELSE
+ 	// var alpha=prompt("enter a character between a-z lowercase. I will tell you if it is vowel or consonant: ");
+
+ 	// 	if(alpha=="a" || alpha=="e" || alpha== "i" || alpha=="o" || alpha=="u"){
+ 	// 		{document.write("This character is a vowel")}//or just write "vowel"
+ 		// }
+ 		// else{document.write("This character is a consonant")}//or just write "consonant"
+
+//USING SWITCH
+	
+	// var alpha=prompt("enter a character between a-z lowercase. I will tell you if it is vowel or consonant: ")
+
+	// switch(alpha){
+	// case "a":
+	// case "e":
+	// case "i":
+	// case "o":
+	// case "u":
+	// {document.write("vowel")}
+	// break;
+	// default:
+	// {document.write("consonant")}
+	// }
+
+
+
+
+// Ternary OPERATOR ->'?'
+	// var weather=prompt("weather? "); //if else
+
+	// if (weather=="sunny"){alert("outdoor")}
+	// else{alert("indoor")}
+
+	// var weather=true;
+
+	//  weather?alert("outdoor"):alert("indoor");
+
+
+	// var birth= prompt("Enter your birth date: ");
+	// var year= new Date();
+	// var age= birth-(year.getFullYear());
+
+	// var currentyear= new Date().getFullYear();
+	// var age= currentyear-birth;
+
+	// if(age<18){alert("You are underage. ")}
+	// else{alert("You are legal")}
+
+	// if((new Date().getFullYear-birth)<18){
+	// 	alert("underage.")}
+	// 	else if(age>=60){
+	// 		alert("waraga emas.")}
+	// 	else{alert("Enjoy life.")}
+		
+	
+//ternary operator 
+
+// new Date().getFullYear()-birth<18?alert("underage."):alert("adult.")
+
+// age>18?alert("underage"):age>=60?alert("warga emas"):alert("Enjoy life")
+
+	var choice=prompt("Enter 1 for number-speller, 2 for vowel finder and 3 for age");
+
+//function will not be executed unless you call them. 
+
+		if(choice==1){
+			numberSpeller();
+			
+		} 
+		else if(choice==2){
+		 alpha();
+	
+		}
+		else{
+		 day(); }
+
+
+function numberSpeller(){
+	var number=Number(prompt("enter numner between 1 and 5. I will spell for you"))
+		switch(number){
+		case 1:
+		document.write("You have entered ONE")
+		break;
+		case 2:
+		document.write("You have entered TWO")
+		break;
+		case 3:
+		document.write("You have entered THREE")
+		break;
+		case 4:
+		document.write("You have entered FOUR")
+		break;
+		case 5:
+		document.write("You have entered FIVE")
+		break;
+		default:
+		document.write("I am yet to learn that!")
+		break;
+}}
+//END OF FUNCTION
+
+	
+	function alpha(){
+	var alpha=prompt("enter a character between a-z lowercase. I will tell you if it is vowel or consonant: ")
+
+		switch(alpha){
+		case "a":
+		case "e":
+		case "i":
+		case "o":
+		case "u":
+		{document.write("vowel")}
+		break;
+		default:
+		{document.write("consonant")}
+		}
+}
+
+
+	function day(){
+	var birth= prompt("Enter your birth date: ");
+	var year= new Date();
+	var age= birth-(year.getFullYear());
+	
+	if(age<18){
+		alert("underage.")}
+			else if(age>=60){
+				alert("warga emas.")}
+			else{alert("Enjoy life.")}
+}
+</script>
+</body>
+</html>

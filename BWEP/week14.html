@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>week14</title>
+</head>
+<body>
+<!-- <body id="bod"> -->
+	<!-- <input type="text" id="color" onkeyup="change1()"><button onclick="change()">Change color</button> -->
+
+<!-- 	//No ID -->
+
+	<input type="text" onkeyup="change2(this.value)">
+<!-- 	for this.value, retrieve the value inside the textbox -->
+
+	<button onclick="change()">Change color</button>
+	
+<!-- 	onkeyup changes the color immediately without the button -->
+
+<script type="text/javascript">
+	
+	function change(){
+	var color= document.getElementById("color");
+	var bod= document.getElementById("bod");
+
+	bod.style.backgroundColor=color.value
+	// .value means the input inside the textbox
+
+	}
+
+	//Second Option: when it tells you not to alter the html.
+
+	function change1(){
+		var color= document.getElementById("color");
+
+		document.body.style.backgroundColor=color.value;
+	}
+
+	//Third Option: *** Function with parameters. When the input type has no ID.
+
+	function change2(color){
+		document.body.style.backgroundColor=color;
+	}
+
+
+</script>
+</body>
+</html>

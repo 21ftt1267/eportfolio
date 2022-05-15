@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>week13</title>
+</head>
+<body>
+<input type="text" id="name" placeholder="name"><br>
+<input type="radio" name="gender" value="male" id="male">Male
+<input type="radio" name="gender" value="female" id="female">Female<br>
+<input type="checkbox" name="wishlist" value="money">Money
+<input type="checkbox" name="wishlist" value="travel">Travel
+<input type="checkbox" name="wishlist" value="happiness">Happiness<br>
+<select name="choice" id="wish">
+	<option value="eternal">eternal life</option>
+	<option value="young">forever young</option>
+	<option value="beauty">eternal beauty</option>
+</select>
+<button onclick="retGender()">reveal gender</button>
+<button onclick="retWL1()">reveal wishlist</button>
+<button onclick="retSelect()">reveal select</button>
+
+<script>
+function retSelect(){
+	var wish= document.getElementById("wish");
+	// alert(wish.value);
+	alert(wish.options[wish.selectedIndex].text)
+}
+
+
+
+function retGender(){
+	var male= document.getElementById("male");
+	var female= document.getElementById("female");
+
+	if(male.checked){alert("male is selected")}
+
+	if(female.checked){alert("female is selected")}
+}
+
+function retWL(){
+	var wishlist= document.getElementsByName("wishlist");
+	var wishes="your wishes: ";
+
+	if(wishlist[0].checked){
+		wishes=wishes+wishlist[0].value+" "
+	}
+
+	if(wishlist[1].checked){
+		wishes=wishes+wishlist[1].value+" "
+	}
+
+	if(wishlist[2].checked){
+		wishes=wishes+wishlist[2].value+" "
+	}
+
+	// alert(wishes)
+
+	// alert(wishes=="your wishes: "?"You have no wishes":wishes)
+
+	if(wishes=="your wishes: "){
+		wishes="You have no wish"
+	} alert(wishes)
+}
+
+function retWL1(){
+	var wishlist= document.getElementsByName("wishlist");
+	var wishes="your wishes: ";
+
+	for(var i=0; i<wishlist.length; i++){
+		if(wishlist[i].checked){
+		wishes=wishes+wishlist[i].value+" "}
+	}
+
+	if(wishes=="your wishes: "){
+		wishes="You have no wish"
+	} alert(wishes)
+}
+</script>
+</body>
+</html>

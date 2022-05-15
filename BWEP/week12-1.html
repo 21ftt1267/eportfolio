@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>week12-1</title>
+
+	<style type="text/css">
+		#msg{width: 200px;
+			height: 3em;
+			border: 1px solid;}
+	</style>
+</head>
+<body>
+<!-- DOM TREE -->
+<!-- Whatever you see in that webpage will become a tree structure. -->
+<!-- Root element is HTML
+Branches out into the head and the body
+The head will contain 3 children, meta, meta name and title -->
+<input type="text" id="name" onfocus="magnify()" onblur="restore()">
+<!-- onfocus used to trigger the function when the cursor is in the textbox -->
+<!-- onblur returns it to normal when the cursor moves away -->
+<div id="msg"></div>
+<button onclick="copyToDiv()">Copy to div</button>
+
+<script type="text/javascript">
+	
+	function copyToDiv(){
+
+		var name= document.getElementById("name");
+		// for this document look for the id "name", the .value retrieves the content of the textbox. Value normally used for input element.
+
+		var msg= document.getElementById("msg");
+			// for this document look for the id "msg"
+
+		msg.innerHTML= msg.innerHTML + name.value + " "; 
+
+		// for this element with ID msg, set the inner HTML to name. In other words, copy and pasting.
+	}
+
+	function magnify(){
+		var name= document.getElementById("name")
+		name.style.color="magenta";
+		name.style.fontSize="1.5em";
+	}
+
+	function restore(){
+		var name= document.getElementById("name")
+		name.style.color="black";
+		name.style.fontSize=""
+	}
+</script>
+</body>
+</html>
